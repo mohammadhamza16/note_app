@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/widgets/custom_notes_app_bar.dart';
 import 'package:note_app/widgets/custom_notes_body.dart';
+import 'package:note_app/widgets/note_list_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,17 +9,38 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: const Scaffold(
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (context) => ShowModalBottomSheet(),
+            );
+          },
+          child: Icon(Icons.add),
+          backgroundColor: Colors.blue,
+        ),
         body: Padding(
-          padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
+          padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
           child: Column(
             children: [
               CustomNotesAppBar(),
-              CustomNotesBody(),
+              Expanded(
+                child: NoteListView(),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+}
+
+class ShowModalBottomSheet extends StatelessWidget {
+  const ShowModalBottomSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

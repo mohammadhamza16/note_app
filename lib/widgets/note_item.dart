@@ -7,8 +7,8 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 20),
-      padding: EdgeInsets.symmetric(vertical: 24, horizontal: 8),
+      margin: const EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 8),
       decoration: BoxDecoration(
         color: Colors.orange[300],
         borderRadius: BorderRadius.circular(8),
@@ -17,7 +17,7 @@ class NoteItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Text(
+            title: const Text(
               'Flutter Tips',
               style: TextStyle(
                 color: Colors.black,
@@ -25,7 +25,7 @@ class NoteItem extends StatelessWidget {
               ),
             ),
             subtitle: Padding(
-              padding: EdgeInsets.symmetric(vertical: 12.0),
+              padding: const EdgeInsets.symmetric(vertical: 12.0),
               child: Text(
                 'Build Your Career with \n Tharwat Samy',
                 style: TextStyle(
@@ -34,7 +34,7 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               FontAwesomeIcons.trash,
               size: 18,
               color: Colors.black,

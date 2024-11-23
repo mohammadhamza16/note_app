@@ -13,7 +13,7 @@ class CustomNotesAppBar extends StatelessWidget {
         ),
         const Spacer(),
         Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(.05),
             borderRadius: BorderRadius.circular(
