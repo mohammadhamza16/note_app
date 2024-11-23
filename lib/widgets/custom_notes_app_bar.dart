@@ -9,13 +9,15 @@ class CustomNotesAppBar extends StatelessWidget {
       children: [
         const Text(
           'Notes',
+          style: TextStyle(fontSize: 24),
         ),
         const Spacer(),
         Container(
-          color: Colors.white.withOpacity(.05),
+          padding: EdgeInsets.all(8),
           decoration: BoxDecoration(
+            color: Colors.white.withOpacity(.05),
             borderRadius: BorderRadius.circular(
-              16,
+              12,
             ),
           ),
           child: const Center(
