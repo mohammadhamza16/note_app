@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/widgets/custom_notes_app_bar.dart';
+import 'package:note_app/widgets/custom_app_bar.dart';
 import 'package:note_app/widgets/note_list_view.dart';
 import 'package:note_app/widgets/show_modal_bottom_sheet.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class NotesView extends StatelessWidget {
+  const NotesView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,10 @@ class HomeView extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
           child: Column(
             children: [
-              CustomNotesAppBar(),
+              CustomAppBar(
+                title: 'Notes',
+                iconData: Icons.search,
+              ),
               Expanded(
                 child: NoteListView(),
               ),
