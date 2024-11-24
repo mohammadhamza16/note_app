@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/widgets/custom_notes_app_bar.dart';
-import 'package:note_app/widgets/custom_notes_body.dart';
 import 'package:note_app/widgets/note_list_view.dart';
+import 'package:note_app/widgets/show_modal_bottom_sheet.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,14 +14,14 @@ class HomeView extends StatelessWidget {
           onPressed: () {
             showModalBottomSheet(
               context: context,
-              builder: (context) => ShowModalBottomSheet(),
+              builder: (context) => const ShowModalBottomSheet(),
             );
           },
-          child: Icon(Icons.add),
           backgroundColor: Colors.blue,
+          child: const Icon(Icons.add),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
+        body: const Padding(
+          padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
           child: Column(
             children: [
               CustomNotesAppBar(),
@@ -33,14 +33,5 @@ class HomeView extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class ShowModalBottomSheet extends StatelessWidget {
-  const ShowModalBottomSheet({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

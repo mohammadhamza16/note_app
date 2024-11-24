@@ -8,7 +8,7 @@ class NoteListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) {
-        return NoteItem();
+        return const NoteItem();
       },
     );
   }
